@@ -12,9 +12,10 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private Button btRegistro;
-    TextView btPedido;
-    TextView btStock;
-    TextView btEliminar;
+    private Button btPedido;
+    private Button btStock;
+    private Button btEliminar;
+    private Button btProducto;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,6 +25,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         btRegistro = (Button) findViewById(R.id.btRegisto);
         btRegistro.setOnClickListener(this);
+        btProducto = (Button) findViewById(R.id.btProducto);
+        btProducto.setOnClickListener(this );
 
 
         btPedido.setOnClickListener(new View.OnClickListener() {
@@ -45,6 +48,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             public void onClick(View view) {
                 Intent e = new Intent(MainActivity.this, EliminarActivity.class);
                 startActivity(e);
+            }
+        });
+        btProducto.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent pr = new Intent(MainActivity.this, ProductoActivity.class);
+                startActivity(pr);
             }
         });
     }

@@ -16,9 +16,13 @@
             android:id="@+id/btRegisto"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="REGISTRO"
-
-            />
+            android:text="REGISTRO" />
+        <Button
+            android:layout_marginTop="30px"
+            android:id="@+id/btProducto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PRODUCTO"/>
 
         <Button
             android:layout_marginTop="30px"
