@@ -45,11 +45,9 @@ public class RegistroActivity extends AppCompatActivity implements ZBarScannerVi
             Log.e(TAG,e.getLocalizedMessage());
         }
         showMessage(mensaje);
-        // Logear el resultado
         Log.v(TAG, rawResult.getContents()); // Resultado del escaneo
         Log.v(TAG, rawResult.getBarcodeFormat().getName()); // Imprime lo escaneado
 
-        // Éste método es para volver a usar la cámara
         mScannerView.resumeCameraPreview(this);
     }
 
